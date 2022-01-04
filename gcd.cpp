@@ -1,13 +1,3 @@
-#include <iostream>
-using namespace std;
-int recursiongcd(int a ,int b){
-    if(b!=0){
-        return recursiongcd(b,a%b);
-    }
-    return a;
-}
-int gcd(int a ,int b){
-    while(b!=0){
         int temp = a%b;
         a=b;
         b=temp;
