@@ -2,7 +2,7 @@
 using namespace std;
 void rot(int *a,int r){
     for(int i=0;i<9;i++){
-        
+                
     }
 }
 int main(){
