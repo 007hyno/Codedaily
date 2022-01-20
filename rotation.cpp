@@ -2,10 +2,7 @@
 using namespace std;
 void p(int *a, int n){
     for(int i=0;i<n;i++){
-        cout<<a[i]<<" ";
-    }
-    cout<<endl;
-    }
+        cout<<a[i]<<" ";}cout<<endl;}
 void first(int *a, int n, int r){
     int t[r];
     for (int i=0;i<r;i++){
@@ -44,8 +41,7 @@ int gcd(int a,int b){
         return a;
      }else{
         return gcd(b,a%b);
-    }
-}
+    }}
 void juggling(int *a ,int n ,int r){
     int g = gcd(r,n);
     int d;
@@ -60,11 +56,8 @@ void juggling(int *a ,int n ,int r){
                break;
            }
            a[i]=a[d];
-           i=d;
-        }
-        a[i]=temp;
-    }
-}
+           i=d;}
+        a[i]=temp;}}
 int main (){
     int a[]={1,2,3,4,5,6,7},n=7,r=3;
     p(a,n);

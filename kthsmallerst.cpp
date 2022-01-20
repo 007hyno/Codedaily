@@ -11,7 +11,7 @@ void merge(int *a ,int l,int m,int r ){
                 temp[k]=a[j];
                 j++;k++;}}
         while(i<=m){
-            temp[k]=a[i];
+            temp[k]=a[i];   
             i++;k++;}
         while(j<=r){
             temp[k]=a[j];
@@ -25,14 +25,17 @@ void mergesort(int *a,int l,int r){
     mergesort(a,m+1,r);
     merge(a,l,m,r);
     }}
+void kth(int *a,int l,int r,int k){
+    mergesort(a,l,r);
+    cout<<a[k+1];
+}
 int main(){
-    int n=8;
-    cin>>n;// int a[8]={6,3,9,5,2,8,7,1};
-    int a[n];
+    int n=7,k=3;
+    int a[n]={4,2,4,23,42,34,23};
     for(int i=0;i<n;i++){
-        cin>>a[i];
+        cout<<a[i]<<" ";
     }
-    mergesort(a,0,n);
-    for(int i=0;i<n;i++){
-        cout<<a[i]<<" ";}   
-    return 0;}
+    cout<<endl;
+    kth(a,0,n,k);
+    return 0;
+}
