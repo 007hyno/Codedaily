@@ -1,17 +1,13 @@
 #include<iostream>
 using namespace std;
 long long maxSum(int *a, int n){
-        
-        int m = -999999,c=0;
+        int m = 0,c=0;
         for(int i =0;i<n;i++){
             c+=a[i];
             if(c>m){
                 m=c;
-            }
-            // if(c<0){
-            //     c=0;
-            // }
-        }
+            }if(c<0){
+                c=0;}}
         return m;
     }
 int main(){
